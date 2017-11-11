@@ -6,8 +6,26 @@ namespace ConcurrentCollectionConsoleApp
     {
         static void Main(string[] args)
         {
-            var generator = new SalesGenerator();
+            // Basic examples
+            var basicUsage = new BasicUsage();
 
+            basicUsage.TestConcurrentDictionary();
+            Console.WriteLine();
+
+            basicUsage.TestConcurrentQueue();
+            Console.WriteLine();
+
+            basicUsage.TestConcurrentStack();
+            Console.WriteLine();
+
+            basicUsage.TestConcurrentBag();
+            Console.WriteLine();
+
+            basicUsage.TestProducerConsumerCollection();
+            Console.WriteLine();
+
+            // Full example
+            var generator = new SalesGenerator();
             generator.RunTest();
 
             Console.ReadLine();
